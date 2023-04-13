@@ -2,8 +2,9 @@ const express=require("express");
 const app=express();
 const PORT=3000;
 const pokemon=require("./models/pokemon");
-
-
+//* Setting view template
+app.set("view engine", "jsx");
+app.engine("jsx", require("jsx-view-engine").createEngine());
 /**
  * GET route /
  */
@@ -17,7 +18,7 @@ app.get("/",(req,res)=>{
  */
 app.get("/pokemon",(req,res)=>{
 
-    res.send(pokemon);
+    res.render("Index");
 })
 
 
