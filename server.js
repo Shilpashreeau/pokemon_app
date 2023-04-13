@@ -17,8 +17,10 @@ app.get("/",(req,res)=>{
  * GET /pokemon
  */
 app.get("/pokemon",(req,res)=>{
-
-    res.render("Index");
+    
+        res.render('Index',{pokemon:pokemon})
+        
+    
 })
 
 
