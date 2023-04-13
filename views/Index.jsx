@@ -16,8 +16,8 @@ function Index(props) {
             const toCapital = ele.name;
            
             return(
-          <li>
-             {toCapital[0].toUpperCase() + toCapital.substring(1)};<br/>
+          <li >
+          <a href={`/pokemon/${i}`}>   {toCapital[0].toUpperCase() + toCapital.substring(1)};<br/></a>
             {/* {ele.img} */}
           </li>)
         })}
