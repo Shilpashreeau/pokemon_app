@@ -26,11 +26,16 @@ app.get("/pokemon",(req,res)=>{
 /**
  * GET pokemon/:id
  */
-app.get("/pokemon/:id",(req,res)=>{
+/*app.get("/pokemon/:id",(req,res)=>{
 
-    res.send(req.params.id);
+    res.render(req.params.id);
+})*/
+
+app.get("/pokemon/:indexOfPokemonArray",(req,res)=>{
+    const { indexOfPokemonArray } = req.params;
+    res.render("Show", { pokemon: pokemon[req.params.indexOfPokemonArray] });
+
 })
-
 
 
 app.listen(PORT,()=>{
